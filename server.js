@@ -31,7 +31,7 @@ wss.on("connection", (ws) => {
   clients.add(ws);
 
   // send initial data to the client
-  const initialData = Array.from({ length: 1000000 }, (_, i) =>
+  const initialData = Array.from({ length: 1 }, (_, i) =>
     generateRandomData(i + 1)
   );
   ws.send(JSON.stringify(initialData));
